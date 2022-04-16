@@ -1,7 +1,7 @@
 version: "3"
 services:
   vprodb:
-    image: youssefabu/vprofiledb:V1
+    image: vprofile/vprofiledb:V1
     ports:
       - "3306:3306"
     volumes:
@@ -23,14 +23,14 @@ services:
       - RABBITMQ_DEFAULT_PASS=guest
 
   vproapp:
-    image: youssefabu/vprofileapp:V1
+    image: vprofile/vprofileapp:V1
     ports:
       - "8080:8080"
     volumes:
       - vproappdata:/usr/local/tomcat/webbapps
 
   vproweb:
-    image: youssefabu/vprofileweb:V1
+    image: vprofile/vprofileweb:V1
     ports:
       - "80:80"
 
